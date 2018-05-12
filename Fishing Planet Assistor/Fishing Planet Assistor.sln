@@ -1,0 +1,40 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 14
+VisualStudioVersion = 14.0.23107.0
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Fishing Planet Assistor", "Fishing Planet Assistor\Fishing Planet Assistor.csproj", "{167B6297-B577-41F2-AB65-2D03A2FC00A4}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WindowHook", "WindowHook\WindowHook.csproj", "{816A91DD-8512-4FBD-91BF-D79400AFA7E7}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GlobalHotkey", "GlobalHotkey\GlobalHotkey.csproj", "{4AEFC437-99E3-4557-953F-6D47775BED8A}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Assistor", "AssistorLibrary\Assistor.csproj", "{2F210FC6-850F-42D6-B419-31EC51F5E675}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{167B6297-B577-41F2-AB65-2D03A2FC00A4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{167B6297-B577-41F2-AB65-2D03A2FC00A4}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{167B6297-B577-41F2-AB65-2D03A2FC00A4}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{167B6297-B577-41F2-AB65-2D03A2FC00A4}.Release|Any CPU.Build.0 = Release|Any CPU
+		{816A91DD-8512-4FBD-91BF-D79400AFA7E7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{816A91DD-8512-4FBD-91BF-D79400AFA7E7}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{816A91DD-8512-4FBD-91BF-D79400AFA7E7}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{816A91DD-8512-4FBD-91BF-D79400AFA7E7}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4AEFC437-99E3-4557-953F-6D47775BED8A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4AEFC437-99E3-4557-953F-6D47775BED8A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4AEFC437-99E3-4557-953F-6D47775BED8A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4AEFC437-99E3-4557-953F-6D47775BED8A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2F210FC6-850F-42D6-B419-31EC51F5E675}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2F210FC6-850F-42D6-B419-31EC51F5E675}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2F210FC6-850F-42D6-B419-31EC51F5E675}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2F210FC6-850F-42D6-B419-31EC51F5E675}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
