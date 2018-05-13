@@ -501,7 +501,7 @@
             // 
             this.retrieveTwitch.AutoSize = true;
             this.retrieveTwitch.ForeColor = System.Drawing.Color.Black;
-            this.retrieveTwitch.Location = new System.Drawing.Point(6, 114);
+            this.retrieveTwitch.Location = new System.Drawing.Point(6, 88);
             this.retrieveTwitch.Name = "retrieveTwitch";
             this.retrieveTwitch.Size = new System.Drawing.Size(57, 17);
             this.retrieveTwitch.TabIndex = 3;
@@ -513,7 +513,7 @@
             // 
             this.retrieveStopGo.AutoSize = true;
             this.retrieveStopGo.ForeColor = System.Drawing.Color.Black;
-            this.retrieveStopGo.Location = new System.Drawing.Point(6, 89);
+            this.retrieveStopGo.Location = new System.Drawing.Point(6, 113);
             this.retrieveStopGo.Name = "retrieveStopGo";
             this.retrieveStopGo.Size = new System.Drawing.Size(64, 17);
             this.retrieveStopGo.TabIndex = 2;
