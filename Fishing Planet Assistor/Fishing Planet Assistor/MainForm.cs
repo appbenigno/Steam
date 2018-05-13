@@ -39,13 +39,6 @@ namespace Fishing_Planet_Assistor
         FishingMode casting = new FishingMode();
         FishingMode spinning = new FishingMode();
         FishingMode floating = new FishingMode();
-        Flags AutoCatch = new Flags();
-        Flags Twitch = new Flags();
-        Flags SlowStraight = new Flags();
-        Flags Straight = new Flags();
-        Flags StopGo = new Flags();
-        Flags LiftDrop = new Flags();
-        Flags Tease = new Flags();
         
         /// <summary>
         /// Public Controls
@@ -151,7 +144,6 @@ namespace Fishing_Planet_Assistor
                         tJerkState(false);
                         timerReeling.Enabled = false;
                         timerJerking.Enabled = false;
-                        Flags.destroy("AutoCatch");
                         Flags.destroy("SlowStraight");
                         Flags.destroy("Straight");
                         Flags.destroy("Twitch");
@@ -192,7 +184,6 @@ namespace Fishing_Planet_Assistor
                         timerReeling.Enabled = false;
                         timerJerking.Enabled = false;
                         Flags.destroy("AutoCatch");
-                        Flags.destroy("SlowStraight");
                         Flags.destroy("Straight");
                         Flags.destroy("Twitch");
                         Flags.destroy("StopGo");
@@ -228,7 +219,6 @@ namespace Fishing_Planet_Assistor
                         timerJerking.Enabled = false;
                         Flags.destroy("AutoCatch");
                         Flags.destroy("SlowStraight");
-                        Flags.destroy("Straight");
                         Flags.destroy("Twitch");
                         Flags.destroy("StopGo");
                         Flags.destroy("LiftDrop");
@@ -266,7 +256,6 @@ namespace Fishing_Planet_Assistor
                         Flags.destroy("AutoCatch");
                         Flags.destroy("SlowStraight");
                         Flags.destroy("Straight");
-                        Flags.destroy("Twitch");
                         Flags.destroy("StopGo");
                         Flags.destroy("LiftDrop");
                         Flags.destroy("Tease");
@@ -302,7 +291,6 @@ namespace Fishing_Planet_Assistor
                         Flags.destroy("SlowStraight");
                         Flags.destroy("Straight");
                         Flags.destroy("Twitch");
-                        Flags.destroy("StopGo");
                         Flags.destroy("LiftDrop");
                         Flags.destroy("Tease");
 
@@ -338,7 +326,6 @@ namespace Fishing_Planet_Assistor
                         Flags.destroy("Straight");
                         Flags.destroy("Twitch");
                         Flags.destroy("StopGo");
-                        Flags.destroy("LiftDrop");
                         Flags.destroy("Tease");
 
                         Flags.raise("LiftDrop");
@@ -374,7 +361,6 @@ namespace Fishing_Planet_Assistor
                         Flags.destroy("Twitch");
                         Flags.destroy("StopGo");
                         Flags.destroy("LiftDrop");
-                        Flags.destroy("Tease");
 
                         Flags.raise("Tease");
                         retrieveTease.Select();
