@@ -101,5 +101,16 @@ namespace Fishing_Planet_Assistor
             return Math.Round(result, 2);
         }
 
+        /// <summary>
+        /// Hex Output
+        /// </summary>
+        /// <param name="value"></param>
+        /// <returns></returns>
+        public static string toHex(int value)
+        {
+            string result;
+            result = value.ToString("X8");
+            return result;
+        }
     }
 }
