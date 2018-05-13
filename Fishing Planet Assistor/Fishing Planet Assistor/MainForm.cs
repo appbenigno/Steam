@@ -115,13 +115,13 @@ namespace Fishing_Planet_Assistor
                 }
                 else if (keyID == Keyboard.PauseBreak.GetHashCode()) //Pause or Break
                 {
-                    AutoCatch.Flag = false;
-                    SlowStraight.Flag = false;
-                    Straight.Flag = false;
-                    Twitch.Flag = false;
-                    StopGo.Flag = false;
-                    LiftDrop.Flag = false;
-                    Tease.Flag = false;
+                    Flags.destroy("AutoCatch");
+                    Flags.destroy("SlowStraight");
+                    Flags.destroy("Straight");
+                    Flags.destroy("Twitch");
+                    Flags.destroy("StopGo");
+                    Flags.destroy("LiftDrop");
+                    Flags.destroy("Tease");
                     tReelState(false);
                     tJerkState(false);
                     timerReeling.Enabled = false;
@@ -135,9 +135,9 @@ namespace Fishing_Planet_Assistor
                 }
                 else if (keyID == Keyboard.Numpad0.GetHashCode() && globals.isLoaded()) //Numpad 0
                 {
-                    if (AutoCatch.isFlagged())
+                    if (Flags.isRaised("AutoCatch"))
                     {
-                        AutoCatch.Flag = false;
+                        Flags.destroy("AutoCatch");
                         tReelState(false);
                         tJerkState(false);
                         timerReeling.Enabled = false;
@@ -145,21 +145,21 @@ namespace Fishing_Planet_Assistor
                         fishing.resetReelingSpeed();
                         notifyTray("Auto-catching", "OFF");
                     }
-                    else if (!AutoCatch.isFlagged())
+                    else if (!Flags.isRaised("AutoCatch"))
                     {
                         tReelState(false);
                         tJerkState(false);
                         timerReeling.Enabled = false;
                         timerJerking.Enabled = false;
-                        AutoCatch.Flag = false;
-                        SlowStraight.Flag = false;
-                        Straight.Flag = false;
-                        Twitch.Flag = false;
-                        StopGo.Flag = false;
-                        LiftDrop.Flag = false;
-                        Tease.Flag = false;
+                        Flags.destroy("AutoCatch");
+                        Flags.destroy("SlowStraight");
+                        Flags.destroy("Straight");
+                        Flags.destroy("Twitch");
+                        Flags.destroy("StopGo");
+                        Flags.destroy("LiftDrop");
+                        Flags.destroy("Tease");
 
-                        AutoCatch.Flag = true;
+                        Flags.raise("AutoCatch");
                         retrievePlain.Select();
                         fishing.focusProgram();
                         fishing.setReelingSpeed(Convert.ToInt32(numSpeed.Value));
@@ -175,9 +175,9 @@ namespace Fishing_Planet_Assistor
                 }
                 else if (keyID == Keyboard.Numpad1.GetHashCode() && globals.isLoaded()) //Numpad 1
                 {
-                    if (SlowStraight.isFlagged())
+                    if (Flags.isRaised("SlowStraight"))
                     {
-                        SlowStraight.Flag = false;
+                        Flags.destroy("SlowStraight");
                         tReelState(false);
                         tJerkState(false);
                         timerReeling.Enabled = false;
@@ -185,21 +185,21 @@ namespace Fishing_Planet_Assistor
                         fishing.resetReelingSpeed();
                         notifyTray("Slow-Straight", "OFF");
                     }
-                    else if (!SlowStraight.isFlagged())
+                    else if (!Flags.isRaised("SlowStraight"))
                     {
                         tReelState(false);
                         tJerkState(false);
                         timerReeling.Enabled = false;
                         timerJerking.Enabled = false;
-                        AutoCatch.Flag = false;
-                        SlowStraight.Flag = false;
-                        Straight.Flag = false;
-                        Twitch.Flag = false;
-                        StopGo.Flag = false;
-                        LiftDrop.Flag = false;
-                        Tease.Flag = false;
+                        Flags.destroy("AutoCatch");
+                        Flags.destroy("SlowStraight");
+                        Flags.destroy("Straight");
+                        Flags.destroy("Twitch");
+                        Flags.destroy("StopGo");
+                        Flags.destroy("LiftDrop");
+                        Flags.destroy("Tease");
 
-                        SlowStraight.Flag = true;
+                        Flags.raise("SlowStraight");
                         retrieveSlowStraight.Select();
                         fishing.focusProgram();
                         fishing.setReelingSpeed(Convert.ToInt32(numSpeed.Value));
@@ -210,9 +210,9 @@ namespace Fishing_Planet_Assistor
                 }
                 else if (keyID == Keyboard.Numpad2.GetHashCode() && globals.isLoaded()) //Numpad 2
                 {
-                    if (Straight.isFlagged())
+                    if (Flags.isRaised("Straight"))
                     {
-                        Straight.Flag = false;
+                        Flags.destroy("Straight");
                         tReelState(false);
                         tJerkState(false);
                         timerReeling.Enabled = false;
@@ -220,21 +220,21 @@ namespace Fishing_Planet_Assistor
                         fishing.resetReelingSpeed();
                         notifyTray("Straight", "OFF");
                     }
-                    else if (!Straight.isFlagged())
+                    else if (!Flags.isRaised("Straight"))
                     {
                         tReelState(false);
                         tJerkState(false);
                         timerReeling.Enabled = false;
                         timerJerking.Enabled = false;
-                        AutoCatch.Flag = false;
-                        SlowStraight.Flag = false;
-                        Straight.Flag = false;
-                        Twitch.Flag = false;
-                        StopGo.Flag = false;
-                        LiftDrop.Flag = false;
-                        Tease.Flag = false;
+                        Flags.destroy("AutoCatch");
+                        Flags.destroy("SlowStraight");
+                        Flags.destroy("Straight");
+                        Flags.destroy("Twitch");
+                        Flags.destroy("StopGo");
+                        Flags.destroy("LiftDrop");
+                        Flags.destroy("Tease");
 
-                        Straight.Flag = true;
+                        Flags.raise("Straight");
                         retrieveStraight.Select();
                         fishing.focusProgram();
                         fishing.setReelingSpeed(Convert.ToInt32(numSpeed.Value));
@@ -245,9 +245,9 @@ namespace Fishing_Planet_Assistor
                 }
                 else if (keyID == Keyboard.Numpad3.GetHashCode() && globals.isLoaded()) //Numpad 3
                 {
-                    if (Twitch.isFlagged())
+                    if (Flags.isRaised("Twitch"))
                     {
-                        Twitch.Flag = false;
+                        Flags.destroy("Twitch");
                         tReelState(false);
                         tJerkState(false);
                         tReelState(false);
@@ -257,21 +257,21 @@ namespace Fishing_Planet_Assistor
                         fishing.resetReelingSpeed();
                         notifyTray("Twitch", "OFF");
                     }
-                    else if (!Twitch.isFlagged())
+                    else if (!Flags.isRaised("Twitch"))
                     {
                         tReelState(false);
                         tJerkState(false);
                         timerReeling.Enabled = false;
                         timerJerking.Enabled = false;
-                        AutoCatch.Flag = false;
-                        SlowStraight.Flag = false;
-                        Straight.Flag = false;
-                        Twitch.Flag = false;
-                        StopGo.Flag = false;
-                        LiftDrop.Flag = false;
-                        Tease.Flag = false;
+                        Flags.destroy("AutoCatch");
+                        Flags.destroy("SlowStraight");
+                        Flags.destroy("Straight");
+                        Flags.destroy("Twitch");
+                        Flags.destroy("StopGo");
+                        Flags.destroy("LiftDrop");
+                        Flags.destroy("Tease");
 
-                        Twitch.Flag = true;
+                        Flags.raise("Twitch");
                         retrieveTwitch.Select();
                         fishing.focusProgram();
                         fishing.setReelingSpeed(Convert.ToInt32(numSpeed.Value));
@@ -282,9 +282,9 @@ namespace Fishing_Planet_Assistor
                 }
                 else if (keyID == Keyboard.Numpad4.GetHashCode() && globals.isLoaded()) //Numpad 4
                 {
-                    if (StopGo.isFlagged())
+                    if (Flags.isRaised("StopGo"))
                     {
-                        StopGo.Flag = false;
+                        Flags.destroy("StopGo");
                         tReelState(false);
                         tJerkState(false);
                         timerReeling.Enabled = false;
@@ -292,21 +292,21 @@ namespace Fishing_Planet_Assistor
                         fishing.resetReelingSpeed();
                         notifyTray("Stop & Go", "OFF");
                     }
-                    else if (!StopGo.isFlagged())
+                    else if (!Flags.isRaised("StopGo"))
                     {
                         tReelState(false);
                         tJerkState(false);
                         timerReeling.Enabled = false;
                         timerJerking.Enabled = false;
-                        AutoCatch.Flag = false;
-                        SlowStraight.Flag = false;
-                        Straight.Flag = false;
-                        Twitch.Flag = false;
-                        StopGo.Flag = false;
-                        LiftDrop.Flag = false;
-                        Tease.Flag = false;
+                        Flags.destroy("AutoCatch");
+                        Flags.destroy("SlowStraight");
+                        Flags.destroy("Straight");
+                        Flags.destroy("Twitch");
+                        Flags.destroy("StopGo");
+                        Flags.destroy("LiftDrop");
+                        Flags.destroy("Tease");
 
-                        StopGo.Flag = true;
+                        Flags.raise("StopGo");
                         retrieveStopGo.Select();
                         fishing.focusProgram();
                         fishing.setReelingSpeed(Convert.ToInt32(numSpeed.Value));
@@ -317,9 +317,9 @@ namespace Fishing_Planet_Assistor
                 }
                 else if (keyID == Keyboard.Numpad5.GetHashCode() && globals.isLoaded()) //Numpad 5
                 {
-                    if (LiftDrop.isFlagged())
+                    if (Flags.isRaised("LiftDrop"))
                     {
-                        LiftDrop.Flag = false;
+                        Flags.destroy("LiftDrop");
                         tReelState(false);
                         tJerkState(false);
                         timerReeling.Enabled = false;
@@ -327,21 +327,21 @@ namespace Fishing_Planet_Assistor
                         fishing.resetReelingSpeed();
                         notifyTray("Lift & Drop", "OFF");
                     }
-                    else if (!LiftDrop.isFlagged())
+                    else if (!Flags.isRaised("LiftDrop"))
                     {
                         tReelState(false);
                         tJerkState(false);
                         timerReeling.Enabled = false;
                         timerJerking.Enabled = false;
-                        AutoCatch.Flag = false;
-                        SlowStraight.Flag = false;
-                        Straight.Flag = false;
-                        Twitch.Flag = false;
-                        StopGo.Flag = false;
-                        LiftDrop.Flag = false;
-                        Tease.Flag = false;
+                        Flags.destroy("AutoCatch");
+                        Flags.destroy("SlowStraight");
+                        Flags.destroy("Straight");
+                        Flags.destroy("Twitch");
+                        Flags.destroy("StopGo");
+                        Flags.destroy("LiftDrop");
+                        Flags.destroy("Tease");
 
-                        LiftDrop.Flag = true;
+                        Flags.raise("LiftDrop");
                         retrieveLiftDrop.Select();
                         fishing.focusProgram();
                         fishing.setReelingSpeed(Convert.ToInt32(numSpeed.Value));
@@ -352,9 +352,9 @@ namespace Fishing_Planet_Assistor
                 }
                 else if (keyID == Keyboard.Numpad6.GetHashCode() && globals.isLoaded()) //Numpad 6
                 {
-                    if (Tease.isFlagged())
+                    if (Flags.isRaised("Tease"))
                     {
-                        Tease.Flag = false;
+                        Flags.destroy("Tease");
                         tReelState(false);
                         tJerkState(false);
                         timerReeling.Enabled = false;
@@ -362,21 +362,21 @@ namespace Fishing_Planet_Assistor
                         fishing.resetReelingSpeed();
                         notifyTray("Teasing", "OFF");
                     }
-                    else if (!Tease.isFlagged())
+                    else if (!Flags.isRaised("Tease"))
                     {
                         tReelState(false);
                         tJerkState(false);
                         timerReeling.Enabled = false;
                         timerJerking.Enabled = false;
-                        AutoCatch.Flag = false;
-                        SlowStraight.Flag = false;
-                        Straight.Flag = false;
-                        Twitch.Flag = false;
-                        StopGo.Flag = false;
-                        LiftDrop.Flag = false;
-                        Tease.Flag = false;
+                        Flags.destroy("AutoCatch");
+                        Flags.destroy("SlowStraight");
+                        Flags.destroy("Straight");
+                        Flags.destroy("Twitch");
+                        Flags.destroy("StopGo");
+                        Flags.destroy("LiftDrop");
+                        Flags.destroy("Tease");
 
-                        Tease.Flag = true;
+                        Flags.raise("Tease");
                         retrieveTease.Select();
                         fishing.focusProgram();
                         fishing.setReelingSpeed(Convert.ToInt32(numSpeed.Value));

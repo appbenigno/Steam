@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -8,87 +9,37 @@ namespace Fishing_Planet_Assistor
 {
     public class Flags
     {
-        private bool flag;
-        public Flags()
+        private static List<String> flagger = new List<string>();
+    
+        public static bool isRaised(String flagString)
         {
-            flag = false;
-        }
-        public Flags(bool state)
-        {
-            flag = state;
-        }
-        public bool Flag
-        {
-           get { return flag; }
-            set { flag = value; }
-        }
-        
-        public bool isFlagged()
-        {
-            return flag;
-        }
-        /*
-        private static bool AutoCatching = false;
-        private static bool Straighting = false;
-        private static bool SlowStraighting = false;
-        private static bool Twitching = false;
-        private static bool StopGoing = false;
-        private static bool LiftDropping = false;
-        private static bool Unsnagging = false;
-        private static bool Teasing = false;
-        public static bool AutoCatch
-        {
-            get { return AutoCatching; }
-            set { AutoCatching = value; }
-        }
-        public static bool Straight
-        {
-            get { return Straighting; }
-            set { Straighting = value; }
-        }
-        public static bool SlowStraight
-        {
-            get { return SlowStraighting; }
-            set { SlowStraighting = value; }
-        }
-        public static bool Twitch
-        {
-            get { return Twitching; }
-            set { Twitching = value; }
-        }
-        public static bool StopGo
-        {
-            get { return StopGoing; }
-            set { StopGoing = value; }
-        }
-        public static bool LiftDrop
-        {
-            get { return LiftDropping; }
-            set { LiftDropping = value; }
-        }
-        public static bool Unsnag
-        {
-            get { return Unsnagging; }
-            set { Unsnagging = value; }
-        }
-        public static bool Tease
-        {
-            get { return Teasing; }
-            set { Teasing = value; }
+            bool result = false;
+            if (flagger.Contains(flagString))
+            {
+                result = true;
+            }
+            else
+            {
+                result = false;
+            }
+            return result;
         }
 
-        
-
-        public static void clear()
+        public static void raise(String flagString)
         {
-            Unsnag = false;
-            AutoCatch = false;
-            LiftDrop = false;
-            SlowStraight = false;
-            StopGo = false;
-            Straight = false;
-            Twitch = false;
-            Tease = false;
-        }*/
+            if(!isRaised(flagString))
+            {
+                flagger.Add(flagString);
+            }
+        }
+
+        public static void destroy(String flagString)
+        {
+            if(isRaised(flagString))
+            {
+                flagger.Remove(flagString);
+            }
+        }
+
     }
 }
